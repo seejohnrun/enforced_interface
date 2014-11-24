@@ -4,15 +4,11 @@ module EnforcedInterface
 
   class << self
     def [](mod)
-      cached_proxy_mod_for(mod)
-    end
-
-    private
-
-    def cached_proxy_mod_for(mod)
       @@mods ||= Hash.new { |h, k| h[k] = proxy_mod_for(k) }
       @@mods[mod]
     end
+
+    private
 
     def proxy_mod_for(mod)
       proxy = Module.new

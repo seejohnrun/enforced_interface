@@ -26,6 +26,8 @@ end
 
 # Checking
 class Person
+  # no area implementation
+
   include EnforcedInterface[AreaInterface] # EnforcedInterface::NotImplementedError
 end
 
