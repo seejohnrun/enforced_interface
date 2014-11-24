@@ -38,6 +38,28 @@ The interfaces will match and verify:
 * Access (public, private, protected)
 * Arity (the number of arguments the method takes)
 
+## Alternative syntax
+
+An alternative syntax (if you're into it) could be:
+
+``` ruby
+# Add our convenience method
+class Module
+  def interface(mod)
+    include EnforcedInterface[mod]
+  end
+end
+
+# Usage
+class Square
+  def area
+    width * height
+  end
+
+  interface AreaInterface
+end
+```
+
 ---
 
 ## Disclaimer
