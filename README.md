@@ -35,6 +35,7 @@ end
 
 The interfaces will match and verify:
 
+* Method Existence
 * Access (public, private, protected)
 * Arity (the number of arguments the method takes)
 
@@ -64,4 +65,5 @@ end
 
 ## Disclaimer
 
-This is just a proof-of-concept!  I don't support using this code.
+This is just a proof-of-concept!  I don't support using this code (especially in
+production) but it sure is interesting...
